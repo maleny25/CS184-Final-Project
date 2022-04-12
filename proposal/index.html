@@ -39,92 +39,103 @@
 
     <h1 align="middle">Summary</h1>
     <p>
-      For this project, we 
+      For our CS 184 final project, we are planning to create a kiwi vine growth simulation. We plan to make it look
+      realistic and use L-Systems to simulate the growth.
     </p>
 
     <h1 align="middle">Problem Description</h1>
 
     <p>
+      We are planning to tackle this problem of simulating accurate growth of a kiwi vine. After researching multiple
+      ideas, we landed on this based on the research that has already been done. We want to learn and apply the
+      mathematical models that are used to simulate the growth of the kiwi vine. This project will simulate the physics
+      from nature of the growth process. It will be a challenge for us because we have to learn about L-Systems to be
+      able to simulate the growth. We are planning to tackle this problem by breaking it into parts of encoding accurate
+      plant structure (including branching and leaf growth), rendering the plant successfully, and incorporating
+      environmental factors.
+    </p>
+
+    <h1 align="middle">Goals and Deliverables</h1>
+    <p>The main goal of our project is to create an accurate simulation of kiwi plant growth in average conditions. This
+      can be broken down into several parts: encoding accurate plant structure (including branching and leaf growth),
+      rendering the plant successfully, and incorporating environmental factors.
+    </p>
+    <p>Much of our work will be based on the equations and model published in the paper, “A functional-structural
+      kiwifruit vine model integrating architecture, carbon dynamics and effects of the environment”. Several images
+      from this model are shown below. We hope to successfully recreate renderings like this, and if that is successful,
+      we will implement a growing model that may be adjusted in real time with carbon inputs. If things go smoothly with
+      these two main goals, we will then adapt our code to simulate other plants given certain governing growth
+      equations. This would be possible through further research of plant architecture and growing patterns, but we may
+      not have time to accomplish.
+    </p>
+    <p>Our simulation's success will be mostly determined through qualitative judgements, although we can compare it to
+      the paper's model under standard lighting conditions to ensure the two plants' growth occurs at the same rate.
+    </p>
+    <h2>Plan to Accomplish</h2>
+    <p>
+      The problem we are planning to tackle is to
+    </p>
+    <br>
+    <h2>Hope to Accomplish</h2>
+    <p>
       The problem we are planning to tackle is to
     </p>
 
-	<h1 align="middle">Goals and Deliverables</h1>
-	<h2>Plan to Accomplish</h2>
-	<p>
-	  The problem we are planning to tackle is to
-	</p>
-	<br>
-	<h2>Hope to Accomplish</h2>
-	<p>
-	  The problem we are planning to tackle is to
-	</p>
-
-	<h1 align="middle">Schedule</h1>
-
     <div align="middle">
       <table style="width=100%">
         <tr>
           <td>
-            <img src="images/pic1.png" align="middle" width="500px" />
-            <figcaption align="middle">First iteration of lerps.</figcaption>
+            <img src="images/pic.png" align="middle" width="500px" />
+            <figcaption align="middle">Image 1</figcaption>
           </td>
           <td>
-            <img src="images/pic2.png" align="middle" width="500px" />
-            <figcaption align="middle">Second iteration of lerps.</figcaption>
-          </td>
-        </tr>
-        <br>
-        <tr>
-          <td>
-            <img src="images/pic3.png" align="middle" width="500px" />
-            <figcaption align="middle">Third iteration of lerps.</figcaption>
-          </td>
-          <td>
-            <img src="images/pic4.png" align="middle" width="500px" />
-            <figcaption align="middle">Fourth iteration of lerps.</figcaption>
-          </td>
-        </tr>
-        <br>
-        <tr>
-          <td>
-            <img src="images/pic5.png" align="middle" width="500px" />
-            <figcaption align="middle">Fifth iteration of lerps. This final iteration contails the point on the bezier
-              curve.</figcaption>
-          </td>
-          <td>
-            <img src="images/pic6.png" align="middle" width="500px" />
-            <figcaption align="middle">Bezier curve with moved control points and a new t value.</figcaption>
+            <img src="images/pic.png" align="middle" width="500px" />
+            <figcaption align="middle">Image 2</figcaption>
           </td>
         </tr>
       </table>
     </div>
 
-	<h1 align="middle">Resources</h1>
-    
+    <h1 align="middle">Schedule</h1>
+    <p>Week 1: Create Github repository, get familiar with WebGL and L-systems (get basic tree growth to work), create T
+      structure which will be the starting point of our vine
+      <br>
+      Week 2: Shoot Development and Vine Architecture - create nodes and generate new nodes using the markov chains
+      stated in the paper referenced
+      <br>
+      Week 3: Carbon Dynamics and Root growth - Use the Euler method as stated in the paper referenced to simulate
+      carbon flow which will determine the flux of root growth
 
-    <div align="middle">
-      <table style="width=100%">
-        <tr>
-          <td>
-            <img src="images/beforeflips.png" align="middle" width="500px" />
-            <figcaption align="middle">Teapot before splits</figcaption>
-          </td>
-          <td>
-            <img src="images/splits.png" align="middle" width="500px" />
-            <figcaption align="middle">Teapot after splits</figcaption>
-          </td>
-        </tr>
-      </table>
-    </div>
+      <br>
+      Week 4: Vegetative Growth and Fruit Growth (if time permits)
+    </p>
 
-    <div align="middle">
-      <img src="images/flips_n_splits.png" align="middle" width="500px" />
-      <figcaption align="middle">Teapot with splits and flips</figcaption>
-    </div>
+    <h1 align="middle">Resources</h1>
+    <ul>
+      <li>Paper titled “A functional-structural kiwifruit vine model integrating architecture, carbon dynamics and
+        effects of the environment”: <a
+          href="https://academic.oup.com/aob/article/107/5/747/245402?login=false">https://academic.oup.com/aob/article/107/5/747/245402?login=false
+        </a></li>
 
-    <br>
+      <li>Website with other algorithmic botany papers and resources: <a
+          href="http://algorithmicbotany.org/">http://algorithmicbotany.org/</a></li>
 
-    <a href="https://cal-cs184-student.github.io/sp22-project-webpages-maleny25/proj2/index.html">https://cal-cs184-student.github.io/sp22-project-webpages-maleny25/proj2/index.html</a>
+      <li>L-Systems simulator to become more familiar with L-systems: <a
+          href="http://lsystems.santigarcor.me/">http://lsystems.santigarcor.me/</a></li>
+
+      <li>Video on L-Systems with plants: <a
+          href="https://www.youtube.com/watch?v=feNVBEPXAcE">https://www.youtube.com/watch?v=feNVBEPXAcE</a></li>
+
+      <li>PlantGL user guide: <a
+          href="https://plantgl-fb.readthedocs.io/en/latest/user/index.html">https://plantgl-fb.readthedocs.io/en/latest/user/index.html</a>
+      </li>
+    </ul>
+
+    <h1 align="middle">Software</h1>
+    <ul>
+      <li>Python and PlantGL for graphics</li>
+      <li>Visual Studio for collaboration</li>
+    </ul>
 
 </body>
 
