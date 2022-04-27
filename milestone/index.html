@@ -1,3 +1,109 @@
-<html>
-	<h2>Milestone</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<style>
+		body {
+			padding: 75px;
+			margin: auto;
+			text-align: left;
+			font-weight: 300;
+			font-family: 'Open Sans', sans-serif;
+			color: #121212;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4 {
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+	</style>
+	<title>Milestone Report</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+	<h2 align="middle">Milestone Report</h2>
+	<h1 align="middle">Kiwi Vine Growth Simulation</h1>
+
+	<h2 align="middle">Angela Gao, Maleny Ruiz, Lucy Wan, and Nicole Wang </h2>
+
+
+	<div>
+
+		<h1 align="middle">Summary</h1>
+		<p>
+			For our milestone, we simulated shoots growing from a kiwi plant.
+		</p>
+
+		<h1 align="middle">Approach</h1>
+
+		<p>
+			To do so, the first step was to read the paper we selected in depth and look into the other research papers
+			that were linked. Since we are all unfamiliar with kiwi plants, this paper provided lots of useful
+			information. From this paper, we learned about the general structure of a kiwi plant and that shoots are
+			formed from first-order auxiliary buds, which we refer to as nodes in our code. Since there are about 18
+			nodes dispersed through canes in a kiwi plant, we use 18 nodes in our code. We also learned that how these
+			shoots grow can be represented by a Markov diagram shown in the paper.
+		</p>
+
+		<p>In order to simulate shoots growing from a kiwi plant, we first had to create the base structure of the Kiwi
+			plant. We decided to use PlantGl as our main framework since it's in Python, which we are all familiar with,
+			and it has all the functionality we need. Even though it was challenging to understand the documentation, we
+			were able to create a base structure using cylinders. Afterwards, we randomly placed nodes in the canes by
+			randomly selecting a cane and then randomly selecting a position in the cane to place the nodes. The nodes
+			are represented by spheres which we placed inside the cane so that they are not visible to users. However,
+			when debugging the node positions, we placed the nodes above the plant structure in order to ensure their
+			relative locations to the canes were correct. Afterwards, we simulated the Markov process by creating three
+			states (dormant, growing, aborted) and the Markov process on each node until all nodes had aborted. If a
+			node was in the grow state, we added a shoot to the node or the end of the existing shoot of the node,
+			represented by a cylinder pointed in a randomly generated direction. Our plant's architecture currently
+			consists of cylinders of varying radii and lengths rendered with colors or, in the case of the branches,
+			texture mapping. We used PlantGL's existing ImageTexture model, along with images downloaded from the web to
+			give a more realistic look to the vine.
+		</p>
+
+		<div align="middle">
+			<img src="tree.jpg" align="center" width="90%" />
+			<figcaption align="middle">Our Current Kiwi Vine Model</figcaption>
+		</div>
+
+		<h1 align="middle">Challenges</h1>
+
+		<p>Challenges we faced included understanding the research paper as well as the PlantGl documentation. The
+			research paper included factors that we do not include in our model, such as temperature, light, and carbon
+			dynamics. Understanding all the model mechanics at play, including both what we planned to implement and how
+			to modify the paper's methods to exclude what we would not, took more time than we had assumed. This initial
+			time sink was exacerbated by the documentation, which was quite barren. After clicking through many links on
+			some bare-bones HTML pages, we were able to find the documentation and use the given tutorial to figure out
+			how to use the classes in the package. In addition to working off of built-in modules, a lot of linear
+			algebra was used in order to create the correct base structure and to get the shoots of the same node to
+			connect to each other. For example, for each node, we had to record the end position of each shoot in order
+			to offset a future shoot by that amount. However, that process took us hours to figure out since for a long
+			time, we calculated the end positions incorrectly and there would be shoots dispersed throughout the GUI.
+			However, in the end, we realized that we needed to use the dot product of three three-dimensional rotation
+			matrices with the vector containing the length of the shoot in order to be able to correctly solve for the
+			end location.
+		</p>
+
+		<h1 align="middle">Next Steps</h1>
+
+		<p>In the future, we are planning to add user defined variables (in order for users to be able to change
+			different functions within our program and see how the kiwi plant reacts), added leaves, adding fruits,
+			making our kiwi plant more aesthetic with a custom texture, as well as the rest of what was defined on our
+			proposal.
+		</p>
+
+		<p>Slides: <a
+				href="https://docs.google.com/presentation/d/1d-2YVd4DIigJ8TB8OMLkOlmv2pzzGsIn1PuRQ-Dmuec/edit?usp=sharing">https://docs.google.com/presentation/d/1d-2YVd4DIigJ8TB8OMLkOlmv2pzzGsIn1PuRQ-Dmuec/edit?usp=sharing</a>
+		</p>
+
+		<p>Video: <a href=""></a></p>
+
+</body>
+
 </html>
